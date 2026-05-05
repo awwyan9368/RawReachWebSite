@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raw Reach Leads Admin</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="./assets/rawreachlogo.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <header class="admin-header">
+        <a class="footer-brand" href="./index.html">
+          <img src="./assets/rawreachlogo.png" alt="Raw Reach Agency logo" />
+          <span>Raw Reach Leads</span>
+        </a>
+        <a class="button secondary" href="./index.html">Back to Website</a>
+      </header>
+
+      <section class="admin-panel">
+        <div>
+          <p class="eyebrow">Admin</p>
+          <h1>Contact Form Submissions</h1>
+          <p>Use the private admin token from your Vercel environment variables to view saved business inquiries.</p>
+        </div>
+
+        <form class="admin-controls" data-admin-form>
+          <label>
+            Admin token
+            <input type="password" name="token" autocomplete="off" required />
+          </label>
+          <div class="admin-actions">
+            <button class="button primary" type="submit">Load Leads</button>
+            <button class="button secondary" type="button" data-csv-button>Export CSV</button>
+          </div>
+          <p class="form-status" role="status" aria-live="polite" data-admin-status></p>
+        </form>
+      </section>
+
+      <section class="admin-table-wrap" aria-label="Lead submissions table">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Company</th>
+              <th>Service</th>
+              <th>Budget</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody data-leads-table>
+            <tr>
+              <td colspan="7">No leads loaded yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="./admin.js" defer></script>
+  </body>
+</html>

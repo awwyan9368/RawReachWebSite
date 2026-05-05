@@ -1,0 +1,13 @@
+{
+  "name": "rawreach-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Raw Reach agency website with Vercel serverless contact backend.",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
