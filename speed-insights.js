@@ -1,9 +1,9 @@
 // Vercel Speed Insights initialization for vanilla JavaScript
-// Based on @vercel/speed-insights package
+// Using @vercel/speed-insights package v2.0.0
 (function() {
   'use strict';
   
-  // Don't run in development mode
+  // Don't track in development mode
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     return;
   }
@@ -25,8 +25,12 @@
   script.src = '/_vercel/speed-insights/script.js';
   script.defer = true;
   
+  // Add SDK metadata
+  script.dataset.sdkn = '@vercel/speed-insights';
+  script.dataset.sdkv = '2.0.0';
+  
   script.onerror = function() {
-    console.log('[Vercel Speed Insights] Failed to load script. Please check if any content blockers are enabled.');
+    console.log('[Vercel Speed Insights] Failed to load script from /_vercel/speed-insights/script.js. Please check if any content blockers are enabled and try again.');
   };
   
   document.head.appendChild(script);
