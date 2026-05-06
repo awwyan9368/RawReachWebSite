@@ -1302,4 +1302,7 @@ select:focus {
     opacity: 1;
     transform: none;
   }
+  .single-field {
+  grid-template-columns: 1fr;
+ }
 }
