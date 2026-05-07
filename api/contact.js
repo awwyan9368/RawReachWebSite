@@ -61,7 +61,8 @@ module.exports = async function handler(req, res) {
       company: clean(body.company, 160),
       websiteUrl: clean(body.websiteUrl, 220),
       service: clean(body.service, 120),
-      budget: clean(body.budget, 80),
+      preferredDate: clean(body.preferredDate, 40),
+      preferredTime: clean(body.preferredTime, 40),
       message: clean(body.message, 1500),
       source: clean(req.headers.referer || "Raw Reach website", 300),
       ip: getIp(req),
@@ -73,6 +74,8 @@ module.exports = async function handler(req, res) {
     if (!validEmail(lead.email)) errors.push("A valid email is required.");
     if (!lead.company) errors.push("Company is required.");
     if (!lead.service) errors.push("Service interest is required.");
+    if (!lead.preferredDate) errors.push("Preferred contact date is required.");
+    if (!lead.preferredTime) errors.push("Preferred contact time is required.");
     if (!lead.message || lead.message.length < 12) errors.push("Please add a little more detail.");
     if (!validUrl(lead.websiteUrl)) errors.push("Website must start with http:// or https://.");
 
