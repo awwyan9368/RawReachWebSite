@@ -1306,4 +1306,12 @@ select:focus {
   .single-field {
   grid-template-columns: 1fr;
  }
+
+  .small-note {
+  margin-top: -4px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+ }
 }
