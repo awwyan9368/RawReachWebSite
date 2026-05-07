@@ -25,6 +25,8 @@ const renderLeads = (leads) => {
       lead.email,
       lead.company,
       lead.service,
+      lead.preferredDate,
+      lead.preferredTime,
       lead.message
     ];
 
