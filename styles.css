@@ -79,6 +79,7 @@ select {
   font: inherit;
 }
 
+
 button {
   cursor: pointer;
 }
@@ -154,7 +155,8 @@ button {
   border: 1px solid var(--line-soft);
   border-radius: 999px;
   padding: 7px;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.84);
+  backdrop-filter: blur(16px);;
 }
 
 .nav-links a {
@@ -233,9 +235,9 @@ button {
   background:
     linear-gradient(
       90deg,
-      rgba(248,245,239,0.92) 0%,
-      rgba(248,245,239,0.72) 42%,
-      rgba(248,245,239,0.18) 100%
+      rgba(248,245,239,0.74) 0%,
+      rgba(248,245,239,0.46) 42%,
+      rgba(248,245,239,0.04) 100%
     );
 }
 
@@ -251,7 +253,7 @@ button {
 .hero-grid {
   width: min(var(--max), calc(100% - 32px));
   margin: 0 auto;
-  padding: 126px 0 92px;
+  padding: 112px 0 72px;
   display: grid;
   grid-template-columns: minmax(0, 760px) minmax(220px, 340px);
   gap: clamp(28px, 5vw, 70px);
@@ -363,12 +365,19 @@ button {
 }
 
 .hero-points span {
-  border: 1px solid var(--line-soft);
+  border: 1px solid rgba(0,0,0,0.08);
+
   border-radius: 999px;
+
   padding: 9px 12px;
-  background: rgba(0, 0, 0, 0.38);
-  color: var(--soft);
-  font-size: 0.88rem;
+
+  background: rgba(255,255,255,0.82);
+
+  color: #555;
+
+  font-size: 0.84rem;
+
+  backdrop-filter: blur(10px);
 }
 
 .hero-panel {
@@ -720,8 +729,8 @@ border: 1px solid rgba(0,0,0,0.06);
 
 .testimonials {
   background:
-    radial-gradient(circle at 80% 20%, rgba(230, 184, 78, 0.13), transparent 26%),
-    #080809;
+    radial-gradient(circle at 80% 20%, rgba(230,184,78,0.08), transparent 26%),
+    #f8f5ef;
 }
 
 .video-slot {
@@ -767,15 +776,24 @@ border: 1px solid rgba(0,0,0,0.06);
 
 .about-mark {
   min-height: 420px;
+
   display: grid;
   place-items: center;
-  border: 1px solid var(--line-soft);
+
+  border: 1px solid rgba(0,0,0,0.06);
+
   border-radius: var(--radius);
+
   background:
-    linear-gradient(135deg, rgba(230, 184, 78, 0.12), rgba(255, 255, 255, 0.03)),
-    #050506;
+    linear-gradient(
+      135deg,
+      rgba(230,184,78,0.08),
+      rgba(255,255,255,0.92)
+    );
+
   box-shadow: var(--shadow);
 }
+
 
 .about-mark img {
   width: min(320px, 78%);
@@ -870,13 +888,27 @@ input,
 textarea,
 select {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(0,0,0,0.08);
+
   border-radius: var(--radius);
+
   outline: none;
-  background: rgba(0, 0, 0, 0.36);
-  color: var(--text);
+
+  background: #ffffff;
+
+  color: #1f2328;
+
   padding: 14px 14px;
-  transition: border-color 160ms ease, box-shadow 160ms ease;
+
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9a9a9a;
 }
 
 textarea {
@@ -1190,7 +1222,7 @@ select:focus {
     justify-items: stretch;
     border-radius: var(--radius);
     padding: 14px;
-    background: rgba(5, 5, 5, 0.96);
+    background: rgba(255,255,255,0.96);
     box-shadow: var(--shadow);
     transform: translateY(-14px);
     opacity: 0;
