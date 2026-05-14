@@ -870,6 +870,8 @@ border: 1px solid rgba(0,0,0,0.06);
 
 .contact-form {
   padding: clamp(20px, 4vw, 34px);
+  display: grid;
+gap: 10px;
 }
 
 .form-row {
@@ -878,12 +880,16 @@ border: 1px solid rgba(0,0,0,0.06);
   gap: 14px;
 }
 
+.single-field {
+  grid-template-columns: 1fr;
+}
+
 label {
   display: grid;
   gap: 8px;
   margin-bottom: 14px;
-  color: var(--soft);
-  font-size: 0.9rem;
+  color: #444;
+ font-size: 0.86rem;
   font-weight: 800;
 }
 
@@ -892,13 +898,13 @@ textarea,
 select {
   width: 100%;
 
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
 
   border-radius: var(--radius);
 
   outline: none;
 
-  background: #ffffff;
+  background: #fcfbf8;
 
   color: #1f2328;
 
