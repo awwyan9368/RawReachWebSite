@@ -131,16 +131,15 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
   color: #1f2328;
 }
 
 .brand img {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
+  height: 42px;
+  width: auto;
 }
 
 .brand span {
@@ -235,9 +234,9 @@ button {
   background:
     linear-gradient(
       90deg,
-      rgba(248,245,239,0.74) 0%,
-      rgba(248,245,239,0.46) 42%,
-      rgba(248,245,239,0.04) 100%
+      rgba(248,245,239,0.68) 0%,
+      rgba(248,245,239,0.34) 42%,
+      rgba(248,245,239,0.02) 100%
     );
 }
 
@@ -276,7 +275,7 @@ button {
 .hero-lede {
   max-width: 650px;
   margin: 24px 0 0;
-  color: var(--soft);
+  color: #3f4348;
   font-size: clamp(1rem, 1.5vw, 1.22rem);
   line-height: 1.75;
 }
@@ -348,10 +347,13 @@ button {
 }
 
 .button.secondary {
-  border-color: var(--line);
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text);
+  background: rgba(255,255,255,0.78);
+
+  border: 1px solid rgba(0,0,0,0.08);
+
+  color: #1f2328;
 }
+
 
 .button:hover,
 .button:focus-visible {
@@ -372,9 +374,9 @@ button {
 
   padding: 9px 12px;
 
-  background: rgba(255,255,255,0.82);
+  background: rgba(255,255,255,0.88);
 
-  color: #555;
+  color: #444;
 
   font-size: 0.84rem;
 
