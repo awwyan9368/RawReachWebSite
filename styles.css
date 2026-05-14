@@ -697,9 +697,8 @@ border: 1px solid rgba(0,0,0,0.06);
 .review-grid,
 .video-grid,
 .career-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .career-grid {
@@ -709,6 +708,8 @@ border: 1px solid rgba(0,0,0,0.06);
 .review-card,
 .career-card {
   padding: 26px;
+  max-width: 520px;
+width: 100%;
 }
 
 .stars {
