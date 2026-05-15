@@ -227,22 +227,22 @@ button {
   filter:
   contrast(1.08)
   brightness(0.72);
+}
 
 .hero-shade {
   position: absolute;
   inset: 0;
   z-index: -2;
 
-background:
-  linear-gradient(
-    90deg,
-    rgba(247,244,238,0.82) 0%,
-    rgba(247,244,238,0.56) 34%,
-    rgba(247,244,238,0.18) 58%,
-    rgba(247,244,238,0.02) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(247,244,238,0.82) 0%,
+      rgba(247,244,238,0.56) 34%,
+      rgba(247,244,238,0.18) 58%,
+      rgba(247,244,238,0.02) 100%
+    );
 }
-
 .hero::after {
   content: "";
   position: absolute;
