@@ -8,8 +8,8 @@
   --line: rgba(201, 162, 39, 0.18);
   --line-soft: rgba(0, 0, 0, 0.06);
 
-  --gold: #c9a227;
-  --gold-2: #ddb85a;
+  --gold: #b88a28;
+  --gold-2: #c9a45b;
   --amber: #9c6a20;
 
   --text: #1f2328;
@@ -224,6 +224,7 @@ button {
   object-fit: cover;
   z-index: -3;
   transform: scale(1.03);
+  filter: contrast(1.04) brightness(0.96);
 }
 
 .hero-shade {
@@ -231,13 +232,13 @@ button {
   inset: 0;
   z-index: -2;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(248,245,239,0.42) 0%,
-      rgba(248,245,239,0.18) 42%,
-      rgba(248,245,239,0.02) 100%
-    );
+ background:
+  linear-gradient(
+    90deg,
+    rgba(248,245,239,0.28) 0%,
+    rgba(248,245,239,0.10) 42%,
+    rgba(248,245,239,0.01) 100%
+  );
 }
 
 .hero::after {
@@ -396,7 +397,9 @@ button {
   width: min(200px, 70%);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.45));
+  filter:
+  drop-shadow(0 8px 18px rgba(255,255,255,0.35))
+  drop-shadow(0 12px 26px rgba(0,0,0,0.18));
 }
 
 .hero-panel p {
