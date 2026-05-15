@@ -285,18 +285,19 @@ button {
   align-items: center;
   gap: 10px;
   margin: 0 0 14px;
-  color: #7a6a3c;
+  color: #9b771f;
   font-weight: 900;
   font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.35);
 }
 
 .eyebrow::before {
   content: "";
   width: 28px;
   height: 1px;
-  background: var(--gold);
+  background: #b58a22;
 }
 
 .hero-actions,
