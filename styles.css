@@ -191,24 +191,28 @@ button {
 .nav-cta {
   justify-self: end;
 
-  border: 1px solid rgba(184,138,40,0.42);
-
-  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   padding: 12px 18px;
 
-  background: rgba(255,255,255,0.96);
+  border-radius: 999px;
 
-  color: #8a6412;
+  background: rgba(255,255,255,0.14);
+
+  border: 1px solid rgba(255,255,255,0.14);
+
+  backdrop-filter: blur(18px);
+
+  color: rgba(255,255,255,0.94);
 
   font-weight: 800;
-
-  box-shadow:
-    0 8px 18px rgba(0,0,0,0.06);
 
   transition:
     transform 180ms ease,
     background 180ms ease,
+    border-color 180ms ease,
     color 180ms ease;
 }
 
@@ -216,9 +220,29 @@ button {
 .nav-cta:focus-visible {
   transform: translateY(-2px);
 
-  background: rgba(255,255,255,0.96);
+  background: rgba(255,255,255,0.22);
 
-  color: #7d5d12;
+  border-color: rgba(255,255,255,0.22);
+
+  color: #ffffff;
+}
+
+.site-header.is-scrolled .nav-cta {
+  background: rgba(255,255,255,0.92);
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  color: #8a6412;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.04);
+}
+
+.site-header.is-scrolled .nav-cta:hover,
+.site-header.is-scrolled .nav-cta:focus-visible {
+  background: #ffffff;
+
+  color: #6e4f10;
 }
 
 
