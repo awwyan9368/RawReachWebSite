@@ -447,19 +447,19 @@ button {
 }
 
 .hero-points span {
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.08);
 
   border-radius: 999px;
 
   padding: 9px 14px;
 
-  background: rgba(255,255,255,0.88);
-
-  color: #4a4a4a;
-
+  background: rgba(255,255,255,0.94);
+  color: #1f2328;
   font-size: 0.82rem;
-
+  font-weight: 700;
   backdrop-filter: blur(10px);
+  box-shadow:
+  0 6px 18px rgba(0,0,0,0.06);
 }
 
 .hero-panel {
