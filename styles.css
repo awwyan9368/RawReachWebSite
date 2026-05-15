@@ -1028,7 +1028,7 @@ select:focus {
   display: grid;
   place-items: center;
   background: var(--whatsapp);
-  box-shadow: 0 16px 44px rgba(37, 211, 102, 0.32);
+  box-shadow: 0 10px 24px rgba(37,211,102,0.20);
   transition: transform 180ms ease;
 }
 
@@ -1046,16 +1046,31 @@ select:focus {
 
 .whatsapp-card {
   position: relative;
+
   width: min(330px, calc(100vw - 44px));
-  border: 1px solid rgba(37, 211, 102, 0.26);
-  border-radius: var(--radius);
-  padding: 20px;
-  background: rgba(8, 10, 9, 0.96);
-  box-shadow: var(--shadow);
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  background: rgba(255,255,255,0.96);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 14px 40px rgba(0,0,0,0.08);
+
   transform: translateY(10px);
+
   opacity: 0;
+
   pointer-events: none;
-  transition: transform 180ms ease, opacity 180ms ease;
+
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
 }
 
 .whatsapp-widget.is-open .whatsapp-card {
@@ -1066,39 +1081,71 @@ select:focus {
 
 .whatsapp-close {
   position: absolute;
-  right: 10px;
-  top: 10px;
+
+  right: 12px;
+  top: 12px;
+
   width: 30px;
   height: 30px;
-  border: 1px solid var(--line-soft);
+
+  border: none;
+
   border-radius: 50%;
+
   background: transparent;
-  color: var(--soft);
+
+  color: #777;
+
+  cursor: pointer;
 }
 
 .whatsapp-card strong {
   display: block;
+
   padding-right: 28px;
-  color: var(--text);
-  font-size: 1.05rem;
+
+  color: #1f2328;
+
+  font-size: 1rem;
+
+  font-weight: 800;
 }
 
 .whatsapp-card p {
-  margin: 10px 0 16px;
-  color: var(--muted);
-  line-height: 1.55;
+  margin: 10px 0 18px;
+
+  color: #555;
+
+  line-height: 1.65;
+
+  font-size: 0.92rem;
 }
 
 .whatsapp-card a {
   display: inline-flex;
+
   align-items: center;
+
+  justify-content: center;
+
   gap: 10px;
-  border-radius: var(--radius);
-  padding: 12px 14px;
-  background: var(--whatsapp);
+
+  width: 100%;
+
+  border-radius: 12px;
+
+  padding: 14px 18px;
+
+  background: #25d366;
+
   color: #ffffff;
-  font-weight: 900;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 18px rgba(37,211,102,0.18);
 }
+
 
 .whatsapp-card a svg {
   width: 23px;
