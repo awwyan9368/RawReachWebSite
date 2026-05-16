@@ -840,14 +840,15 @@ border: 1px solid rgba(0,0,0,0.06);
 }
 
 .review-grid,
-.video-grid,
-.career-grid {
-  display: flex;
-  justify-content: center;
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .career-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  justify-content: center;
 }
 
 .review-card,
@@ -1423,21 +1424,54 @@ select:focus {
   }
 
   .nav-links {
-    position: fixed;
-    inset: 76px 16px auto;
-    display: grid;
-    gap: 8px;
-    justify-items: stretch;
-    border-radius: var(--radius);
-    padding: 14px;
-    background: rgba(255,255,255,0.72);
-    border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: var(--shadow);
-    transform: translateY(-14px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 180ms ease, transform 180ms ease;
-  }
+  position: fixed;
+
+  inset: 76px 16px auto;
+
+  display: grid;
+
+  gap: 8px;
+
+  justify-items: stretch;
+
+  border-radius: 18px;
+
+  padding: 14px;
+
+  background: rgba(20,20,20,0.72);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: var(--shadow);
+
+  transform: translateY(-14px);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+  .nav-links a {
+  color: rgba(255,255,255,0.92);
+}
+
+  .stat-card {
+  min-height: 180px;
+}
+
+  .contact-form {
+  padding: 20px;
+}
+
+  .hero-actions .button {
+  animation: none;
+}
 
   .nav-links a {
     border-radius: var(--radius);
@@ -1505,8 +1539,36 @@ select:focus {
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.6rem, 16vw, 4.2rem);
-  }
+  font-size: clamp(2.2rem, 11vw, 3.4rem);
+
+  line-height: 1.08;
+}
+
+  .hero-lede {
+  font-size: 0.98rem;
+
+  line-height: 1.7;
+}
+
+  .hero-actions {
+  flex-direction: column;
+
+  align-items: stretch;
+}
+
+.hero-actions .button {
+  width: 100%;
+}
+
+  .hero-points {
+  gap: 8px;
+}
+
+.hero-points span {
+  font-size: 0.76rem;
+
+  padding: 8px 12px;
+}
 
   .hero-panel {
     padding-left: 0;
