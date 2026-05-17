@@ -9,7 +9,21 @@
       content="Raw Reach is a performance-driven SMMA agency helping US roofing companies generate qualified leads, book appointments, and turn attention into revenue."
     />
     <link rel="icon" type="image/png" href="./assets/rawlogo.png" />
-    <link rel="preload" href="./assets/roofingbgsmall.webp" as="image" type="image/webp" />
+    <link
+  rel="preload"
+  href="/assets/roofingbgsmall.webp"
+  as="image"
+  type="image/webp"
+  media="(max-width: 760px)"
+/>
+
+<link
+  rel="preload"
+  href="/assets/roofingbg.webp"
+  as="image"
+  type="image/webp"
+  media="(min-width: 761px)"
+/>
     <link rel="stylesheet" href="./styles.css" />
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -49,8 +63,27 @@
     <main id="main">
       <section class="hero" id="home" aria-label="Raw Reach homepage">
        <picture class="hero-bg-wrap">
-  <source srcset="./assets/roofingbgsmall.webp" type="image/webp" />
-  <img src="./assets/roofingbgsmall.webp" alt="" class="hero-bg" fetchpriority="high" />
+  <!-- Mobile image -->
+  <source
+    srcset="/assets/roofingbgsmall.webp"
+    media="(max-width: 760px)"
+    type="image/webp"
+  />
+
+  <!-- Desktop/laptop WebP -->
+  <source
+    srcset="/assets/roofingbg.webp"
+    media="(min-width: 761px)"
+    type="image/webp"
+  />
+
+  <!-- Fallback -->
+  <img
+    src="/assets/roofingbg.png"
+    alt=""
+    class="hero-bg"
+    fetchpriority="high"
+  />
 </picture>
         <div class="hero-shade"></div>
         <div class="hero-grid">
