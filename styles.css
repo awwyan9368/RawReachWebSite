@@ -1572,9 +1572,7 @@ select:focus {
   }
 
   .hero-bg {
-  content: url("assets/roofingbgsmall.webp");
-
-  object-fit: cover;
+   object-fit: cover;
 
   object-position: center;
 
