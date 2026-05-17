@@ -259,7 +259,7 @@ top: 10px;
 
 
 .nav-toggle {
-  display: grid;
+  display: none;
 
   place-items: center;
 
@@ -1436,7 +1436,7 @@ select:focus {
   }
 
   .nav-toggle {
-    display: block;
+    display: grid;
     justify-self: end;
   }
 
@@ -1457,7 +1457,7 @@ select:focus {
 
   border-radius: 20px;
 
-  background: rgba(18,18,18,0.84);
+  background: rgba(15,15,15,0.88);
 
   border: 1px solid rgba(255,255,255,0.08);
 
@@ -1472,10 +1472,14 @@ select:focus {
 
   pointer-events: none;
 
+  visibility: hidden;
+
   transition:
     opacity 180ms ease,
-    transform 180ms ease;
+    transform 180ms ease,
+    visibility 180ms ease;
 }
+  
   
   .nav-links a {
   color: rgba(255,255,255,0.94);
@@ -1483,6 +1487,8 @@ select:focus {
   padding: 12px 14px;
 
   border-radius: 12px;
+
+  background: transparent;
 }
   
   .stat-card {
@@ -1502,10 +1508,14 @@ select:focus {
   }
 
   .nav-links.is-open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
+  transform: translateY(0);
+
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+}
 
   .nav-cta {
     display: none;
@@ -1553,6 +1563,10 @@ select:focus {
     display: none;
   }
 
+  .brand {
+  color: #ffffff;
+}
+
   .hero {
     min-height: 104svh;
   }
@@ -1563,7 +1577,7 @@ select:focus {
   transform: scale(1);
 
   filter:
-    brightness(0.72)
+    brightness(0.82)
     contrast(1.02);
 
   animation: none;
@@ -1573,9 +1587,9 @@ select:focus {
   background:
     linear-gradient(
       180deg,
-      rgba(0,0,0,0.54) 0%,
-      rgba(0,0,0,0.30) 48%,
-      rgba(0,0,0,0.10) 100%
+      rgba(0,0,0,0.42) 0%,
+      rgba(0,0,0,0.22) 48%,
+      rgba(0,0,0,0.06) 100%
     );
 }
 
@@ -1583,7 +1597,7 @@ select:focus {
     padding-top: 112px;
     padding-bottom: 108px;
   }
-
+  
   .hero-copy h1 {
   font-size: clamp(2.2rem, 11vw, 3.4rem);
 
@@ -1628,9 +1642,9 @@ select:focus {
 }
 
   .hero-grid {
-  gap: 32px;
+  gap: 24px;
 }
-
+  
   .site-header {
   background: transparent;
 }
